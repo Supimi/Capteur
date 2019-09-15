@@ -46,7 +46,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.out_z = findViewById(R.id.out_z);
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)!=null){
+            accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        }else{
+
+        }
+
     }
 
     @Override

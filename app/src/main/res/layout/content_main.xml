@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/label_x"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -24,13 +24,13 @@
         android:textColor="#223DC7"
         android:textSize="18sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/label_y"
         app:layout_constraintEnd_toStartOf="@+id/out_x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/label_y"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -43,29 +43,29 @@
         android:textSize="18sp"
         android:textStyle="bold|italic"
         android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/label_z"
         app:layout_constraintEnd_toStartOf="@+id/out_y"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_stop"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/label_z"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="?attr/colorBackgroundFloating"
-        android:fontFamily="sans-serif-condensed-light"
-        android:onClick="stop"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:foregroundGravity="center"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Z"
+        android:textColor="#223DC7"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
         android:padding="5dp"
-        android:text="Stop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_start"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
+        app:layout_constraintEnd_toStartOf="@+id/out_z"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/btn_start"
@@ -88,41 +88,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.818" />
 
-    <TextView
-        android:id="@+id/out_z"
-        android:layout_width="200dp"
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/corner_edge"
-        android:fontFamily="sans-serif-condensed"
-        android:foregroundGravity="center"
-        android:gravity="clip_horizontal|center_vertical"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/colorBackgroundFloating"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="stop"
         android:padding="5dp"
-        android:textSize="18sp"
-        android:textStyle="normal"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btn_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.818" />
 
-    <TextView
-        android:id="@+id/out_y"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="175dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/corner_edge"
-        android:fontFamily="sans-serif-condensed"
-        android:foregroundGravity="center"
-        android:gravity="clip_horizontal|center_vertical"
-        android:padding="5dp"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/out_z"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/out_x"
@@ -142,25 +126,43 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/out_y"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/label_x"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="50dp"
+        android:id="@+id/out_y"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="250dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/corner_edge"
+        android:fontFamily="sans-serif-condensed"
         android:foregroundGravity="center"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Z"
-        android:textColor="#223DC7"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
+        android:gravity="clip_horizontal|center_vertical"
         android:padding="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/out_z"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/out_z"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_y"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/out_z"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/corner_edge"
+        android:fontFamily="sans-serif-condensed"
+        android:foregroundGravity="center"
+        android:gravity="clip_horizontal|center_vertical"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_z"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
