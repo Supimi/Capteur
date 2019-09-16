@@ -1,6 +1,6 @@
-#Capteur
+# Capteur
 
-An android app to read Accelerometer sesor output
+## An android app to read Accelerometer sesor output
 
 
 This App reads the Accelerometer reading from the given API and display acceleration in x,y and z axes.
